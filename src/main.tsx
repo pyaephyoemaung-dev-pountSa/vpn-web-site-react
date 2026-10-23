@@ -8,7 +8,10 @@ import './index.css'
 // import UserList from './components/userList'
 // import Features from './components/Features';
 // import ChoosePlan from './components/ChoosePlan'
-import SideEffect from './components/SideEffect';
+// import SideEffect from './components/SideEffect';
+import { CounterProvider } from './providers/CounterProvider';
+// import App from './App';
+import Hook from './components/Hook';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -18,6 +21,9 @@ createRoot(document.getElementById('root')!).render(
     <Features />
     <ChoosePlan/> */}
     {/* <Count/> */}
-    <SideEffect/>
+    <CounterProvider>
+      <Hook/>
+    </CounterProvider>
+    {/* <SideEffect/> */}
   </StrictMode>,
 )
